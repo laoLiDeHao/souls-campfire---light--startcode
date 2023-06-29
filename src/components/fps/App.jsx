@@ -27,7 +27,7 @@ export default function App({
   return (
     <>
       <Canvas shadows>
-        <Environment files="/hdrs/642fdafa8ca99.hdr" background />
+        <Environment files="https://campsoul-light-1256331022.cos.ap-nanjing.myqcloud.com/hrds/642fdafa8ca99.hdr" background />
         <Game  room={room} setRoom={setRoom} setChatMsg={setChatMsg} joypos={joypos} structure={structure} box={box} />
         {/* <PointerLockControls /> */}
         <Stats />

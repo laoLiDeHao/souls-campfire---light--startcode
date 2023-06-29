@@ -16,13 +16,15 @@ import {
   Html,
 } from "@react-three/drei";
 import { useGraph } from "@react-three/fiber";
-import {  useSpring } from "@react-spring/three";
+// import {  useSpring } from "@react-spring/three";
 import { SkeletonUtils } from "three-stdlib";
 
+const modelUrl="https://campsoul-light-1256331022.cos.ap-nanjing.myqcloud.com/bodys/default/stacy.glb"
+const modelTextUrl="https://campsoul-light-1256331022.cos.ap-nanjing.myqcloud.com/bodys/default/stacy.jpg"
 export default function Model({nickname, pose, ...props }) {
   // Fetch model and a separate texture
-  const { scene, animations } = useGLTF("/player/stacy.glb");
-  const texture = useTexture("/player/stacy.jpg");
+  const { scene, animations } = useGLTF(modelUrl);
+  const texture = useTexture(modelTextUrl);
   scene.position.set(0, -100, 0);
   // Skinned meshes cannot be re-used in threejs without cloning them
   const clone = useMemo(() => SkeletonUtils.clone(scene), [scene]);

@@ -6,8 +6,7 @@ import { useFrame, useThree } from "@react-three/fiber";
 import useKeyboard from "./useKeyboard";
 import { CameraControls } from "@react-three/drei";
 import Model from "./Model";
-import { Joystick } from "react-joystick-component";
-//import CapsuleCollider from './CapsuleCollider'
+
 
 const GRAVITY = 30;
 const STEPS_PER_FRAME = 5;
